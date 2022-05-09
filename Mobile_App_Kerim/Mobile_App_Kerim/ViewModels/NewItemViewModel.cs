@@ -11,6 +11,7 @@ namespace Mobile_App_Kerim.ViewModels
     {
         private string text;
         private string description;
+        private int age;
 
         public NewItemViewModel()
         {
@@ -30,6 +31,11 @@ namespace Mobile_App_Kerim.ViewModels
         {
             get => text;
             set => SetProperty(ref text, value);
+        }
+        public int Age
+        {
+            get => age;
+            set => SetProperty(ref age, value);
         }
 
         public string Description
@@ -53,7 +59,8 @@ namespace Mobile_App_Kerim.ViewModels
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
-                Description = Description
+                Description = Description,
+                Age = age,
             };
 
             await DataStore.AddItemAsync(newItem);

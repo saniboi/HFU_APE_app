@@ -12,12 +12,19 @@ namespace Mobile_App_Kerim.ViewModels
         private string itemId;
         private string text;
         private string description;
+        private int age;
         public string Id { get; set; }
 
         public string Text
         {
             get => text;
             set => SetProperty(ref text, value);
+        }
+
+        public int Age
+        {
+            get => age;
+            set => SetProperty(ref age, value);
         }
 
         public string Description
@@ -47,6 +54,7 @@ namespace Mobile_App_Kerim.ViewModels
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;
+                Age = item.Age;
             }
             catch (Exception)
             {

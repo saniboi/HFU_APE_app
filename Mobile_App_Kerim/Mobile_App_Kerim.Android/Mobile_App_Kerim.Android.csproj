@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD2256C8-F6C7-43D8-B6BA-CDC421EE5E40}</ProjectGuid>
+    <ProjectGuid>{EFBB687D-DFDA-484E-ACE3-628CA4330BED}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -88,7 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mobile_App_Kerim\Mobile_App_Kerim.csproj">
-      <Project>{EBC606AE-C4F4-4035-A517-900E1DF2FD29}</Project>
+      <Project>{0562A28B-51BF-40D9-8E39-F5699CC60085}</Project>
       <Name>Mobile_App_Kerim</Name>
     </ProjectReference>
   </ItemGroup>

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{45BC16B1-9FEE-43DF-A4F0-349B0EE3CF58}</ProjectGuid>
+    <ProjectGuid>{E5E232D2-9EA5-498D-BD32-E6162355B5F6}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -138,7 +138,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Mobile_App_Kerim\Mobile_App_Kerim.csproj">
-      <Project>{EBC606AE-C4F4-4035-A517-900E1DF2FD29}</Project>
+      <Project>{0562A28B-51BF-40D9-8E39-F5699CC60085}</Project>
       <Name>Mobile_App_Kerim</Name>
     </ProjectReference>
   </ItemGroup>
