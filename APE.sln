@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile_App_Kerim.Android", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile_App_Kerim.iOS", "Mobile_App_Kerim\Mobile_App_Kerim.iOS\Mobile_App_Kerim.iOS.csproj", "{E5E232D2-9EA5-498D-BD32-E6162355B5F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile_App_Kerim", "Mobile_App_Kerim\Mobile_App_Kerim\Mobile_App_Kerim.csproj", "{F5161B63-A88C-4845-8B27-159E3136029A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mobile_App_Kerim", "Mobile_App_Kerim\Mobile_App_Kerim\Mobile_App_Kerim.csproj", "{F5161B63-A88C-4845-8B27-159E3136029A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
