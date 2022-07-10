@@ -14,12 +14,14 @@ namespace Mobile_App_Kerim.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description.", Age = 16 },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description.", Age = 18 },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description.", Age = 20 },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description.", Age = 22 },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description.", Age = 24 },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description.", Age = 26 }
+                new Item { Id = Guid.NewGuid().ToString(), Name = "San", Vorname = "Kerim", Geburtsdatum = new DateTime(1988, 11, 20), Strasse = "Kantonsschulstrasse", 
+                    Strassennummer = 6, Ort = "Bülach", Postleitzahl = 8180, Telefonnummer = 0797965000},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "San", Vorname = "Kerem", Geburtsdatum = new DateTime(2019, 12, 27), Strasse = "Kantonsschulstrasse",
+                    Strassennummer = 6, Ort = "Bülach", Postleitzahl = 8180, Telefonnummer = 0797965000},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "San", Vorname = "Zeynep", Geburtsdatum = new DateTime(1984, 08, 31), Strasse = "Kantonsschulstrasse",
+                    Strassennummer = 6, Ort = "Bülach", Postleitzahl = 8180, Telefonnummer = 0797965000},
+                new Item { Id = Guid.NewGuid().ToString(), Name = "San", Vorname = "Zehra", Geburtsdatum = new DateTime(2015, 12, 12), Strasse = "Kantonsschulstrasse",
+                    Strassennummer = 6, Ort = "Bülach", Postleitzahl = 8180, Telefonnummer = 0797965000}
             };
         }
 
@@ -33,7 +35,7 @@ namespace Mobile_App_Kerim.Services
 
         public async Task<bool> UpdateItemAsync(Item item)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            var oldItem = items.FirstOrDefault(arg => arg.Id == item.Id);
             items.Remove(oldItem);
             items.Add(item);
 
@@ -42,7 +44,7 @@ namespace Mobile_App_Kerim.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
+            var oldItem = items.FirstOrDefault(arg => arg.Id == id);
             items.Remove(oldItem);
 
             return await Task.FromResult(true);
