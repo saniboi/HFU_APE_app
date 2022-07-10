@@ -84,7 +84,7 @@ namespace Mobile_App_Kerim.ViewModels
         {
             try
             {
-                var item = await DataStore.GetItemAsync(itemId);
+                var item = await App.Database.GetItemAsync(itemId);
                 Id = item.Id;
                 Name = item.Name;
                 Vorname = item.Vorname;

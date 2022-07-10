@@ -35,7 +35,7 @@ namespace Mobile_App_Kerim.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await App.Database.GetItemsAsync();
                 foreach (var item in items)
                 {
                     Items.Add(item);

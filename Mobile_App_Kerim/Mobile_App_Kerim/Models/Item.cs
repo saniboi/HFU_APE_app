@@ -1,9 +1,12 @@
 ﻿using System;
+using Mobile_App_Kerim.ViewModels;
+using SQLite;
 
 namespace Mobile_App_Kerim.Models
 {
-    public class Item
+    public class Item : BaseViewModel
     {
+        [PrimaryKey]
         public string Id { get; set; }
         public string Name { get; set; }
         public string Vorname { get; set; }
