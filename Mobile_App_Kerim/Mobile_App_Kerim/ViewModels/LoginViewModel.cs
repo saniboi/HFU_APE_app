@@ -1,12 +1,9 @@
 ﻿using Mobile_App_Kerim.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Mobile_App_Kerim.Services;
 using Plugin.Fingerprint;
 using Plugin.Fingerprint.Abstractions;
-using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Mobile_App_Kerim.ViewModels
 {
@@ -24,6 +21,7 @@ namespace Mobile_App_Kerim.ViewModels
         private async void OnLoginClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+            
             var availability = await
                 CrossFingerprint.Current.IsAvailableAsync();
 
@@ -43,7 +41,7 @@ namespace Mobile_App_Kerim.ViewModels
                 await messageService.ShowAsync("Yaay!", "Here is the secrets", "Thanks!");
                 await Shell.Current.GoToAsync($"//{nameof(InfoPage)}");
             }
-            
+
         }
     }
 }

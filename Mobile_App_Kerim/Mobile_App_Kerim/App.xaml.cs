@@ -11,6 +11,7 @@ namespace Mobile_App_Kerim
 
         public App()
         {
+            DependencyService.Register<IMessageService, MessageService>();
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
