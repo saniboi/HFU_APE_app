@@ -1,16 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:Mobile_App_Kerim.ViewModels" 
+             x:DataType="viewmodels:ItemDetailViewModel"
              x:Class="Mobile_App_Kerim.Views.ItemDetailPage"
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>
-        <Label Text="Age:" FontSize="Medium" />
-        <Label Text="{Binding Age}" FontSize="Small"/>
+        <Label Text="Name:" FontSize="Medium" />
+        <Label Text="{Binding Name}" FontSize="Small"/>
+        <Label Text="Vorname:" FontSize="Medium" />
+        <Label Text="{Binding Vorname}" FontSize="Small"/>
+        <Label Text="Strasse:" FontSize="Medium" />
+        <Label Text="{Binding Strasse}" FontSize="Small"/>
+        <Label Text="Strassennummer:" FontSize="Medium" />
+        <Label Text="{Binding Strassennummer}" FontSize="Small"/>
+        <Label Text="Ort:" FontSize="Medium" />
+        <Label Text="{Binding Ort}" FontSize="Small"/>
+        <Label Text="Postleitzahl:" FontSize="Medium" />
+        <Label Text="{Binding Postleitzahl}" FontSize="Small"/>
+        <Label Text="Telefonnummer:" FontSize="Medium" />
+        <Label Text="{Binding Telefonnummer}" FontSize="Small"/>
+        <Label Text="Geburtsdatum:" FontSize="Medium" />
+        <Label Text="{Binding Geburtsdatum}" FontSize="Small"/>
     </StackLayout>
     
 </ContentPage>

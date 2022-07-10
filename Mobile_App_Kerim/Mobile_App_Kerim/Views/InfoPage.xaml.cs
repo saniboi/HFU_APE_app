@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Mobile_App_Kerim.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class InfoPage : ContentPage
     {
-        public AboutPage()
+        public InfoPage()
         {
             InitializeComponent();
         }

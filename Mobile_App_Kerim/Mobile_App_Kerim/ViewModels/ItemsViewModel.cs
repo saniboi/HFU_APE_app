@@ -10,7 +10,7 @@ namespace Mobile_App_Kerim.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private Item _selectedItem;
+        private Item selectedItem;
 
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
@@ -19,7 +19,7 @@ namespace Mobile_App_Kerim.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Telefonbuch";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -59,10 +59,10 @@ namespace Mobile_App_Kerim.ViewModels
 
         public Item SelectedItem
         {
-            get => _selectedItem;
+            get => selectedItem;
             set
             {
-                SetProperty(ref _selectedItem, value);
+                SetProperty(ref selectedItem, value);
                 OnItemSelected(value);
             }
         }

@@ -1,17 +1,20 @@
 ﻿using Mobile_App_Kerim.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
+using System.Net.Mime;
 using Xamarin.Forms;
 
 namespace Mobile_App_Kerim.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
-        private string text;
-        private string description;
-        private int age;
+        private string name;
+        private string vorname;
+        private string strasse;
+        private int strassennummer;
+        private string ort;
+        private int postleitzahl;
+        private int telefonnummer;
+        private DateTime geburtsdatum;
 
         public NewItemViewModel()
         {
@@ -23,31 +26,64 @@ namespace Mobile_App_Kerim.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+            return !string.IsNullOrWhiteSpace(name)
+                && !string.IsNullOrWhiteSpace(vorname)
+                && !string.IsNullOrWhiteSpace(strasse)
+                && !string.IsNullOrWhiteSpace(ort);
         }
 
-        public string Text
+        public string Name
         {
-            get => text;
-            set => SetProperty(ref text, value);
-        }
-        public int Age
-        {
-            get => age;
-            set => SetProperty(ref age, value);
+            get => name;
+            set => SetProperty(ref name, value);
         }
 
-        public string Description
+        public string Vorname
         {
-            get => description;
-            set => SetProperty(ref description, value);
+            get => vorname;
+            set => SetProperty(ref vorname, value);
+        }
+
+        public string Strasse
+        {
+            get => strasse;
+            set => SetProperty(ref strasse, value);
+        }
+
+        public int Strassennummer
+        {
+            get => strassennummer;
+            set => SetProperty(ref strassennummer, value);
+        }
+
+        public string Ort
+        {
+            get => ort;
+            set => SetProperty(ref ort, value);
+        }
+
+        public int Postleitzahl
+        {
+            get => postleitzahl;
+            set => SetProperty(ref postleitzahl, value);
+        }
+
+        public int Telefonnummer
+        {
+            get => telefonnummer;
+            set => SetProperty(ref telefonnummer, value);
+        }
+
+        public DateTime Geburtsdatum
+        {
+            get => geburtsdatum;
+            set => SetProperty(ref geburtsdatum, value);
         }
 
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
 
-        private async void OnCancel()
+        private static async void OnCancel()
         {
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
@@ -58,9 +94,14 @@ namespace Mobile_App_Kerim.ViewModels
             Item newItem = new Item()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = Text,
-                Description = Description,
-                Age = age,
+                Name = Name,
+                Vorname = Vorname,
+                Strasse = Strasse,
+                Strassennummer = Strassennummer,
+                Ort = Ort,
+                Postleitzahl = Postleitzahl,
+                Telefonnummer = Telefonnummer,
+                Geburtsdatum = Geburtsdatum
             };
 
             await DataStore.AddItemAsync(newItem);
