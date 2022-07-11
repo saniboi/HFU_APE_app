@@ -22,7 +22,7 @@ namespace Mobile_App_Kerim.Views
 
             // Retrieve all the notes from the database, and set them as the
             // data source for the CollectionView.
-            ItemsListView.ItemsSource = await App.Database.GetItemsAsync();
+            //ItemsListView.ItemsSource = await App.Database.GetItemsAsync();
         }
 
         async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)

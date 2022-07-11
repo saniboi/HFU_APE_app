@@ -106,8 +106,6 @@ namespace Mobile_App_Kerim.ViewModels
                 Geburtsdatum = Geburtsdatum
             };
 
-            await App.Database.SaveItemAsync(item);
-
             MessagingCenter.Send(this, "AddItem", item);
 
             // This will pop the current page off the navigation stack

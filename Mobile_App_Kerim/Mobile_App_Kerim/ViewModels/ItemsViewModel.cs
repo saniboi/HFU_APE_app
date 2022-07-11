@@ -26,7 +26,7 @@ namespace Mobile_App_Kerim.ViewModels
             MessagingCenter.Subscribe<NewItemViewModel, Item>(this, "AddItem", async (obj, item) =>
             {
                 Items.Add(item);
-                LoadItemsCommand.Execute(null);
+                await App.Database.SaveItemAsync(item);
             });
 
             ItemTapped = new Command<Item>(OnItemSelected);
