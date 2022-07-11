@@ -93,7 +93,7 @@ namespace Mobile_App_Kerim.ViewModels
 
         private async void OnSave()
         {
-            await App.Database.SaveItemAsync(new Item
+            var item = new Item
             {
                 Id = Guid.NewGuid().ToString(),
                 Name = Name,
@@ -104,7 +104,11 @@ namespace Mobile_App_Kerim.ViewModels
                 Postleitzahl = Postleitzahl,
                 Telefonnummer = Telefonnummer,
                 Geburtsdatum = Geburtsdatum
-            });
+            };
+
+            await App.Database.SaveItemAsync(item);
+
+            MessagingCenter.Send(this, "AddItem", item);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");

@@ -23,6 +23,12 @@ namespace Mobile_App_Kerim.ViewModels
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
+            MessagingCenter.Subscribe<NewItemViewModel, Item>(this, "AddItem", async (obj, item) =>
+            {
+                Items.Add(item);
+                LoadItemsCommand.Execute(null);
+            });
+
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
